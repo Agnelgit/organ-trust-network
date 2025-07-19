@@ -28,6 +28,11 @@ const Dashboard = () => {
   useEffect(() => {
     loadDashboardData();
     setupWebSocketListeners();
+    
+    // Cleanup function
+    return () => {
+      // Clean up any subscriptions or listeners
+    };
   }, []);
 
   const loadDashboardData = async () => {

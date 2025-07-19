@@ -17,6 +17,11 @@ const BlockchainStatus = () => {
   useEffect(() => {
     checkServerConnection();
     connectWebSocket();
+    
+    // Initialize blockchain service
+    if (typeof window !== 'undefined' && window.ethereum) {
+      console.log('MetaMask detected');
+    }
   }, []);
 
   const checkServerConnection = async () => {

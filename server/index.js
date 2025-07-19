@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const compression = require('compression');
 const { createServer } = require('http');
 const { Server } = require('socket.io');
-const Web3 = require('web3').default;
+const { Web3 } = require('web3');
 
 const app = express();
 const server = createServer(app);

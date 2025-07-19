@@ -1,5 +1,12 @@
 import { ethers } from 'ethers';
 
+// Extend Window interface for ethereum
+declare global {
+  interface Window {
+    ethereum?: any;
+  }
+}
+
 export interface BlockchainConfig {
   chainId: number;
   chainName: string;
